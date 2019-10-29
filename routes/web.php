@@ -11,6 +11,10 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->group(['prefix' => 'api', 'middleware' => 'auth'], function($router) {
+    $router->get('/', function () use ($router) {
+
+        return 'authorized';
+
+    });
 });
