@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Auth\OAuthAuthenticate;
+use App\Auth\OAuthAuthenticateFacade;
 use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;
 
@@ -36,9 +37,8 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        $oauth = new OAuthAuthenticate();
 
-        if (! $oauth->attempt($request) ) {
+        if (! OAuthAuthenticateFacade::attempt($request) ) {
             return response('Unauthorized.', 401);
         }
 

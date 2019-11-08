@@ -11,9 +11,13 @@
 |
 */
 
+use App\Auth\OAuthAuthenticateFacade;
+
+
 $router->group(['prefix' => 'api', 'middleware' => 'auth'], function($router) {
     $router->get('/', function () use ($router) {
 
+        //$model->setConnection(OAuthAuthenticateFacade::connection());
         return 'authorized';
 
     });
