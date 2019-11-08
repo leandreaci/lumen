@@ -1,0 +1,16 @@
+version: '3'
+services:
+  lumen:
+    container_name: 'lumen'
+    build: .
+    ports:
+      - 8000:80
+    expose:
+      - 80
+    volumes:
+      - .:/var/www/html
+#networks:
+#  default:
+#    external:
+#      name: internal
+
