@@ -2,10 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use App\Auth\OAuthAuthenticate;
-use App\Auth\OAuthAuthenticateFacade;
 use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;
+use Leandreaci\AuthStateless\OAuthAuthenticateFacade;
 
 class Authenticate
 {

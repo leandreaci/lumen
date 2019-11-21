@@ -8,7 +8,8 @@
         "php": "^7.2",
         "laravel/lumen-framework": "^6.0",
         "guzzlehttp/guzzle": "~6.0",
-        "leandreaci/filterable": "*@dev"
+        "leandreaci/filterable": "*@dev",
+        "leandreaci/auth-stateless-microservice": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
