@@ -60,7 +60,10 @@ $app->singleton(
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-$app->register(\Leandreaci\AuthStateless\AuthApiServiceProvider::class);
+ $app->routeMiddleware([
+     'auth' => App\Http\Middleware\Authenticate::class,
+ ]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -75,7 +78,7 @@ $app->register(\Leandreaci\AuthStateless\AuthApiServiceProvider::class);
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
-$app->register(App\Providers\AuthApiServiceProvider::class);
+$app->register(\Leandreaci\AuthStateless\AuthApiServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
