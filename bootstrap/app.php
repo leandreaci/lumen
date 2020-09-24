@@ -80,6 +80,9 @@ $app->routeMiddleware([
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(\Leandreaci\AuthStateless\AuthApiServiceProvider::class);
+$app->register(Aws\Laravel\AwsServiceProvider::class);
+$app->register(App\Providers\LogServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
